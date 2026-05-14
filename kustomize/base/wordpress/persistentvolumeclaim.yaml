@@ -8,5 +8,5 @@ spec:
   resources:
     requests:
       storage: 200Mi
-  storageClassName: rook-cephfs
+  storageClassName: hostpath-sc
   volumeMode: Filesystem
