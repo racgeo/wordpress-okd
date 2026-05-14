@@ -46,7 +46,7 @@ patchesStrategicMerge:
     metadata:
       name: wp-content
     spec:
-      storageClassName: rook-cephfs
+      storageClassName: hostpath-sc
   - |-
     kind: StatefulSet
     apiVersion: apps/v1
@@ -57,7 +57,7 @@ patchesStrategicMerge:
       - metadata:
           name: mariadb
         spec:
-          storageClassName: rook-ceph-block
+          storageClassName: hostpath-sc
           volumeMode: Filesystem
           accessModes: 
             - ReadWriteOnce
